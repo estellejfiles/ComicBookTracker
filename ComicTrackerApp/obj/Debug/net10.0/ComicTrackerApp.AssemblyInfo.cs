@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ComicTrackerApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63c60a4ece995f255aac7a5fdd5a09efca81c91a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39d4c55700b3df80c049651670e00baaa482b219")]
 [assembly: System.Reflection.AssemblyProductAttribute("ComicTrackerApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ComicTrackerApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

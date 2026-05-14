@@ -11,12 +11,12 @@
     <img src="/images/@comic.ImageFileName" alt="@comic.Name" style="max-width: 300px;"/>
     <p>@comic.Name   @comic.Year</p>
     <p>Price: $@comic.Price.ToString("F2")</p>
-    <input type="checkbox" name="SelectedIds" value="@comic.Id" @(comic.InWishlist ? "checked" : "") />
+    <input type="checkbox" name="WishlistIds" value="@comic.Id" @(comic.InWishlist ? "checked" : "") />
     <label>Add to Wishlist</label>
-    <button type="submit">Update</button>
-    <input type="checkbox" name="SelectedIds" value="@comic.Id" @(comic.InCollection ? "checked" : "") />
+    <button type="submit" asp-page-handler="Wishlist">Update Wishlist</button>
+    <input type="checkbox" name="CollectionIds" value="@comic.Id" @(comic.InCollection ? "checked" : "") />
     <label>Add to Collection</label>
-    <button type="submit">Update</button>
+    <button type="submit" asp-page-handler="Collection">Update Collection</button>
     <hr>
 }
 </form>

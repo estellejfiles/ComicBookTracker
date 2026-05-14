@@ -13,19 +13,29 @@ namespace ComicTrackerApp.Pages
         // list that will hold all comics
         public List<Comic> Comics {get; set;} = new List<Comic>();
         [BindProperty]
-        public List<int> SelectedIds {get; set;} = new List<int>();
+        public List<int> WishlistIds {get; set;} = new List<int>();
+        [BindProperty]
+        public List<int> CollectionIds {get; set;} = new List<int>();
         // handles HTTP Get request; initializes ComicList from db
         public void OnGet()
         {
             LoadComicList();
         }
 
-        // on post method that updates wishlist, wishlist, and reloads comic list
-        public void OnPost()
+        // update only wishlist values
+        public IActionResult OnPostWishlist()
         {
-            UpdateInWishlist(SelectedIds);
-            UpdateInCollection(SelectedIds);
+            UpdateInWishlist(WishlistIds);
             LoadComicList();
+            return Page();
+        }
+
+        // update only collection values
+        public IActionResult OnPostCollection()
+        {
+            UpdateInCollection(CollectionIds);
+            LoadComicList();
+            return Page();
         }
 
         // helper method to load comics from db; only called within this class
