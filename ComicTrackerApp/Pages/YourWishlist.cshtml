@@ -1,0 +1,16 @@
+﻿@page
+@model ComicTrackerApp.Pages.ComicsModel
+@{
+    ViewData["Title"] = "Your Wishlist";
+}
+
+@using System.Linq
+@foreach (var comic in Model.Comics.Where(c => c.InWishlist))
+{
+    <li>
+        <p>@comic.Name</p>
+        <p>@comic.Year</p>
+        <p>Price: $@comic.Price.ToString("F2")</p>
+        <img src="/images/@comic.ImageFileName" alt="@comic.Name" style="max-width: 300px;" />
+    </li>
+}

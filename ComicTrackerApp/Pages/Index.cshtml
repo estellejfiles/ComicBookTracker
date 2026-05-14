@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1>Welcome to the Comic Wishlist App!</h1>
+    <h5>~ use this app to browse comics and create your own wishlist ~</h3>
+    <p></p>
+    <div class=".d-inline-flex">
+    <p>Browse comics here: <a class=".nav-link" asp-page="/Comics">Comics</a></p>
+    </div>
+    <div class=".d-inline-flex">
+    <p>View your wishlist here: <a class=".nav-link" asp-page="/YourWishlist">Your Wishlist</a></p>
+    </div>
+    <div class=".d-inline-flex">
+    <p>View your collection here: <a class=".nav-link" asp-page="/Collection">Your Collection</a></p>
+    </div>
+</div>

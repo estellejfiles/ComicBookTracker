@@ -1,0 +1,22 @@
+﻿@page
+@model ComicTrackerApp.Pages.ComicsModel
+@{
+    ViewData["Title"] = "Comics";
+}
+<h1>Comics</h1>
+
+<form method="post">
+@foreach (var comic in Model.Comics)
+{
+    <img src="/images/@comic.ImageFileName" alt="@comic.Name" style="max-width: 300px;"/>
+    <p>@comic.Name   @comic.Year</p>
+    <p>Price: $@comic.Price.ToString("F2")</p>
+    <input type="checkbox" name="SelectedIds" value="@comic.Id" @(comic.InWishlist ? "checked" : "") />
+    <label>Add to Wishlist</label>
+    <button type="submit">Update</button>
+    <input type="checkbox" name="SelectedIds" value="@comic.Id" @(comic.InCollection ? "checked" : "") />
+    <label>Add to Collection</label>
+    <button type="submit">Update</button>
+    <hr>
+}
+</form>
