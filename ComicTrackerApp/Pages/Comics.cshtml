@@ -13,10 +13,11 @@
     <p>Price: $@comic.Price.ToString("F2")</p>
     <input type="checkbox" name="WishlistIds" value="@comic.Id" @(comic.InWishlist ? "checked" : "") />
     <label>Add to Wishlist</label>
-    <button type="submit" asp-page-handler="Wishlist">Update Wishlist</button>
+    <button type="submit" asp-page-handler="Wishlist">update</button>
+    <br>
     <input type="checkbox" name="CollectionIds" value="@comic.Id" @(comic.InCollection ? "checked" : "") />
     <label>Add to Collection</label>
-    <button type="submit" asp-page-handler="Collection">Update Collection</button>
+    <button type="submit" asp-page-handler="Collection">update</button>
     <hr>
 }
 </form>
